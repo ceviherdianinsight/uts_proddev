@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UTS Pengembangan Produk — Product Critique & Innovation Challenge</title>
+<style>
+    :root{
+        --navy:#14213d;
+        --blue:#2563eb;
+        --light:#f5f7fb;
+        --card:#ffffff;
+        --text:#243044;
+        --muted:#64748b;
+        --green:#0f766e;
+        --orange:#ea580c;
+        --border:#e2e8f0;
+    }
+    *{box-sizing:border-box}
+    body{
+        margin:0;
+        font-family:Inter,Segoe UI,Arial,sans-serif;
+        color:var(--text);
+        background:var(--light);
+        line-height:1.65;
+    }
+    .hero{
+        background:linear-gradient(135deg,#14213d,#1d4ed8);
+        color:white;
+        padding:55px 20px 45px;
+    }
+    .container{max-width:1100px;margin:auto}
+    .badge{
+        display:inline-block;
+        background:rgba(255,255,255,.16);
+        border:1px solid rgba(255,255,255,.25);
+        padding:7px 13px;
+        border-radius:999px;
+        font-size:.85rem;
+        margin-bottom:15px;
+    }
+    h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;margin:0 0 15px}
+    .subtitle{font-size:1.15rem;max-width:800px;opacity:.92}
+    .meta{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+        gap:12px;
+        margin-top:28px;
+    }
+    .meta div{
+        background:rgba(255,255,255,.1);
+        padding:14px;
+        border-radius:12px;
+    }
+    .meta strong{display:block;font-size:.8rem;opacity:.75;text-transform:uppercase}
+    main{padding:30px 20px 60px}
+    section{
+        background:var(--card);
+        border:1px solid var(--border);
+        border-radius:18px;
+        padding:28px;
+        margin:22px 0;
+        box-shadow:0 8px 25px rgba(15,23,42,.05);
+    }
+    h2{color:var(--navy);margin-top:0;font-size:1.65rem}
+    h3{color:var(--navy);margin-bottom:8px}
+    .choice{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:20px;
+    }
+    .option{
+        border:2px solid var(--border);
+        border-radius:16px;
+        padding:24px;
+    }
+    .option.a{border-color:#93c5fd}
+    .option.b{border-color:#99f6e4}
+    .option h3{font-size:1.25rem}
+    .label{
+        display:inline-block;
+        font-weight:700;
+        font-size:.8rem;
+        padding:5px 9px;
+        border-radius:7px;
+        background:#eff6ff;
+        color:#1d4ed8;
+        margin-bottom:10px;
+    }
+    .b .label{background:#ecfdf5;color:var(--green)}
+    ol li, ul li{margin:8px 0}
+    .question{
+        border-left:5px solid var(--blue);
+        background:#f8fafc;
+        padding:18px 20px;
+        margin:16px 0;
+        border-radius:0 12px 12px 0;
+    }
+    .question strong{color:var(--navy)}
+    table{
+        width:100%;
+        border-collapse:collapse;
+        margin:15px 0;
+        font-size:.95rem;
+    }
+    th,td{
+        border:1px solid var(--border);
+        padding:11px;
+        text-align:left;
+        vertical-align:top;
+    }
+    th{background:#eff6ff;color:var(--navy)}
+    .flow{
+        display:flex;
+        flex-wrap:wrap;
+        gap:8px;
+        align-items:center;
+        margin:20px 0;
+    }
+    .flow span{
+        background:#eef2ff;
+        color:#3730a3;
+        padding:9px 13px;
+        border-radius:9px;
+        font-weight:600;
+    }
+    .arrow{color:#94a3b8;font-weight:bold}
+    .important{
+        background:#fff7ed;
+        border-left:5px solid var(--orange);
+        padding:18px 20px;
+        border-radius:0 12px 12px 0;
+    }
+    .success{
+        background:#ecfdf5;
+        border-left:5px solid var(--green);
+        padding:18px 20px;
+        border-radius:0 12px 12px 0;
+    }
+    .rubric td:last-child,.rubric th:last-child{text-align:center}
+    .footer{
+        text-align:center;
+        color:var(--muted);
+        padding:10px 20px 40px;
+        font-size:.9rem;
+    }
+    @media(max-width:760px){
+        .choice{grid-template-columns:1fr}
+        section{padding:21px}
+        table{font-size:.85rem}
+    }
+    @media print{
+        body{background:white}
+        section{box-shadow:none;break-inside:avoid}
+        .hero{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+    }
+</style>
+</head>
+<body>
+
+<header class="hero">
+<div class="container">
+    <span class="badge">UNIVERSITAS PADJADJARAN · FAKULTAS EKONOMI DAN BISNIS · BISNIS DIGITAL</span>
+    <h1>UTS Pengembangan Produk</h1>
+    <div class="subtitle">Product Critique &amp; Product Innovation Challenge</div>
+    <p>Ujian ini menguji kemampuan Anda dalam mengidentifikasi masalah pelanggan, menganalisis produk dan kompetitor, menemukan peluang, serta merancang solusi produk yang dapat diuji di pasar.</p>
+
+    <div class="meta">
+        <div><strong>Mata Kuliah</strong>Pengembangan Produk</div>
+        <div><strong>Kode</strong>B10E.5105</div>
+        <div><strong>Bentuk</strong>Individu</div>
+        <div><strong>Bobot</strong>20%</div>
+        <div><strong>Output</strong>Laporan + Prototype</div>
+    </div>
+</div>
+</header>
+
+<main class="container">
+
+<section>
+<h2>1. Tujuan UTS</h2>
+<p>Setelah menyelesaikan UTS, mahasiswa diharapkan mampu:</p>
+<ol>
+<li>Mengidentifikasi <em>customer needs</em> dan <em>pain points</em>.</li>
+<li>Menganalisis kualitas, masalah, dan peluang pengembangan sebuah produk.</li>
+<li>Melakukan <em>competitive analysis</em>.</li>
+<li>Menentukan target customer dan <em>value proposition</em>.</li>
+<li>Mengembangkan konsep produk atau perbaikan produk.</li>
+<li>Menentukan fitur/spesifikasi dasar berdasarkan kebutuhan pelanggan.</li>
+<li>Merancang <em>prototype</em> sederhana.</li>
+<li>Merancang metode <em>market testing</em> untuk menguji produk atau konsep produk.</li>
+<li>Menggunakan data/evidence untuk mendukung argumentasi dan keputusan pengembangan produk.</li>
+</ol>
+</section>
+
+<section>
+<h2>2. Pilih Salah Satu Tantangan</h2>
+<div class="choice">
+    <div class="option a">
+        <span class="label">OPTION A</span>
+        <h3>Critique an Existing Product</h3>
+        <p>Pilih <strong>satu produk yang sudah tersedia di pasar</strong>. Kritisi produk tersebut, temukan masalah atau <em>customer pain points</em>, lakukan analisis kompetitor, kemudian rancang <strong>improvement</strong> terhadap produk tersebut.</p>
+        <p><strong>Contoh:</strong> aplikasi digital, fintech, marketplace, makanan/minuman, fashion, kosmetik, edutech, healthtech, SaaS, UMKM, dan produk lainnya.</p>
+    </div>
+
+    <div class="option b">
+        <span class="label">OPTION B</span>
+        <h3>Develop Your Own Product</h3>
+        <p>Identifikasi <strong>customer problem</strong> atau <em>market opportunity</em>, kemudian kembangkan sebuah konsep produk baru yang memberikan solusi terhadap masalah tersebut.</p>
+        <p><strong>Contoh:</strong> AI financial advisor, aplikasi UMKM, smart farming, edutech, fintech, SaaS, sustainable product, food innovation, dan sebagainya.</p>
+    </div>
+</div>
+</section>
+
+<section>
+<h2>3. Prinsip Utama UTS</h2>
+<div class="important">
+<strong>Jangan memulai dari "produk apa yang ingin saya buat".</strong><br>
+Mulailah dari masalah customer dan evidence yang menunjukkan bahwa masalah tersebut benar-benar ada.
+</div>
+
+<div class="flow">
+<span>Problem / Opportunity</span><b class="arrow">→</b>
+<span>Customer</span><b class="arrow">→</b>
+<span>Evidence</span><b class="arrow">→</b>
+<span>Competitor</span><b class="arrow">→</b>
+<span>Opportunity</span><b class="arrow">→</b>
+<span>Product</span><b class="arrow">→</b>
+<span>Prototype</span><b class="arrow">→</b>
+<span>Market Test</span>
+</div>
+
+<div class="success">
+<strong>Ingat:</strong> Produk yang sederhana tetapi didukung analisis yang kuat lebih baik daripada produk yang sangat canggih tetapi tidak menunjukkan customer problem, evidence, dan alasan pengembangannya.
+</div>
+</section>
+
+<section>
+<h2>4. Soal UTS — OPTION A</h2>
+<h3>Product Critique &amp; Improvement</h3>
+
+<div class="question"><strong>1. Product Review</strong><br>
+Pilih satu produk yang telah tersedia di pasar. Jelaskan produk, target customer, masalah yang diselesaikan, <em>value proposition</em>, dan bagaimana produk tersebut memberikan value kepada customer.
+</div>
+
+<div class="question"><strong>2. Identify Customer Needs</strong><br>
+Identifikasi minimal <strong>5 customer needs</strong> dan <em>pain points</em>. Sertakan bukti/data yang mendukung setiap kebutuhan.
+</div>
+
+<table>
+<tr><th>No</th><th>Customer Need</th><th>Pain Point</th><th>Bukti / Data</th></tr>
+<tr><td>1</td><td>...</td><td>...</td><td>...</td></tr>
+<tr><td>2</td><td>...</td><td>...</td><td>...</td></tr>
+<tr><td>3</td><td>...</td><td>...</td><td>...</td></tr>
+<tr><td>4</td><td>...</td><td>...</td><td>...</td></tr>
+<tr><td>5</td><td>...</td><td>...</td><td>...</td></tr>
+</table>
+
+<div class="question"><strong>3. Competitive Analysis</strong><br>
+Bandingkan produk yang Anda pilih dengan minimal <strong>2 kompetitor</strong>. Analisis minimal aspek harga, fitur, UX/UI, customer service, convenience, technology, dan value proposition.
+</div>
+
+<div class="question"><strong>4. Identify Product Problems</strong><br>
+Temukan minimal <strong>3 masalah utama</strong>. Untuk setiap masalah jelaskan evidence dan dampaknya terhadap customer.
+</div>
+
+<div class="question"><strong>5. Product Improvement</strong><br>
+Jika Anda menjadi Product Manager perusahaan tersebut, perubahan apa yang akan Anda lakukan? Rancang minimal <strong>3 improvement</strong> menggunakan logika Problem → Root Cause → Solution → Customer Value.
+</div>
+
+<div class="question"><strong>6. Design the Improved Product</strong><br>
+Buat prototype/wireframe/mock-up sederhana yang menunjukkan minimal halaman utama, fitur utama, customer journey, dan proses penggunaan produk.
+</div>
+
+<div class="question"><strong>7. Target Market</strong><br>
+Tentukan <strong>Segmentation → Targeting → Positioning (STP)</strong> untuk produk yang telah diperbaiki.
+</div>
+
+<div class="question"><strong>8. Market Testing</strong><br>
+Rancang metode untuk mengetahui apakah improvement Anda benar-benar dibutuhkan customer. Jelaskan target responden, jumlah responden, metode pengujian, hal yang diuji, dan indikator keberhasilan.
+</div>
+</section>
+
+<section>
+<h2>5. Soal UTS — OPTION B</h2>
+<h3>New Product Development</h3>
+
+<div class="question"><strong>1. Identify Opportunity</strong><br>
+Identifikasi sebuah masalah atau peluang di masyarakat/pasar. Jelaskan melalui alur <strong>Observation → Problem → Opportunity</strong>.
+</div>
+
+<div class="question"><strong>2. Customer Needs</strong><br>
+Identifikasi minimal <strong>5 customer needs</strong>, pain points, dan tingkat kepentingannya.
+</div>
+
+<table>
+<tr><th>No</th><th>Customer Need</th><th>Pain Point</th><th>Importance</th></tr>
+<tr><td>1</td><td>...</td><td>...</td><td>High / Medium / Low</td></tr>
+<tr><td>2</td><td>...</td><td>...</td><td>High / Medium / Low</td></tr>
+<tr><td>3</td><td>...</td><td>...</td><td>High / Medium / Low</td></tr>
+<tr><td>4</td><td>...</td><td>...</td><td>High / Medium / Low</td></tr>
+<tr><td>5</td><td>...</td><td>...</td><td>High / Medium / Low</td></tr>
+</table>
+
+<div class="question"><strong>3. Proposed Product</strong><br>
+Jelaskan nama produk, masalah yang diselesaikan, target customer, fitur utama, teknologi, <em>value proposition</em>, dan model pendapatan.
+</div>
+
+<div class="question"><strong>4. Value Proposition</strong><br>
+Lengkapi: <strong>For</strong> [target customer] → <strong>Who</strong> [customer problem] → <strong>Our Product</strong> [product] → <strong>That Provides</strong> [benefit] → <strong>Unlike</strong> [existing alternative] → <strong>Our Product</strong> [unique value].
+</div>
+
+<div class="question"><strong>5. Competitive Analysis</strong><br>
+Identifikasi minimal <strong>3 produk/kompetitor</strong> yang sudah ada. Jelaskan mengapa customer membutuhkan produk Anda jika alternatif/kompetitor sudah tersedia.
+</div>
+
+<div class="question"><strong>6. Product Specification</strong><br>
+Tentukan minimal <strong>5 fitur/fungsi utama</strong> dan hubungkan setiap fitur dengan customer need serta prioritasnya.
+</div>
+
+<div class="question"><strong>7. Prototype</strong><br>
+Buat prototype sederhana dengan alur minimal: <strong>Home → Main Feature → Customer Action → Result</strong>.
+</div>
+
+<div class="question"><strong>8. Target Market</strong><br>
+Tentukan <strong>Segmentation → Targeting → Positioning</strong>.
+</div>
+
+<div class="question"><strong>9. Market Testing</strong><br>
+Rancang eksperimen untuk menguji apakah produk Anda berpotensi diterima pasar. Jelaskan hypothesis, target responden, metode, jumlah responden, variabel yang diuji, success metrics, dan keputusan jika hasil testing tidak sesuai harapan.
+</div>
+</section>
+
+<section>
+<h2>6. Struktur Laporan UTS</h2>
+<ol>
+<li><strong>Cover</strong> — Nama, NPM, kelas, mata kuliah, dan judul produk.</li>
+<li><strong>Bab 1 — Product / Opportunity</strong> — Background, problem identification, customer problem, opportunity.</li>
+<li><strong>Bab 2 — Customer &amp; Market</strong> — Customer needs, target customer, pain points, market analysis.</li>
+<li><strong>Bab 3 — Competitive Analysis</strong> — Competitor, competitive comparison, competitive gap.</li>
+<li><strong>Bab 4 — Product Development</strong> — Product concept, value proposition, features, specification, prototype.</li>
+<li><strong>Bab 5 — Market Testing</strong> — Testing method, target, hypothesis, success metrics, expected result.</li>
+<li><strong>Bab 6 — Conclusion</strong> — Problem utama, solusi produk, dan alasan produk memberikan value kepada customer.</li>
+</ol>
+</section>
+
+<section>
+<h2>7. Sumber Data / Evidence</h2>
+<p>Gunakan data atau evidence yang relevan. Sumber dapat berupa:</p>
+<ul>
+<li>Review pengguna</li>
+<li>Google Play / App Store</li>
+<li>Marketplace</li>
+<li>Survei sederhana</li>
+<li>Wawancara</li>
+<li>Media sosial</li>
+<li>Forum pengguna</li>
+<li>Laporan industri</li>
+<li>Website perusahaan</li>
+<li>Observasi langsung</li>
+</ul>
+
+<div class="important">
+<strong>Bedakan ASSUMPTION dan EVIDENCE.</strong><br><br>
+<strong>Assumption:</strong> "Menurut saya mahasiswa membutuhkan aplikasi ini."<br>
+<strong>Evidence:</strong> "Berdasarkan survei terhadap 100 mahasiswa, 72% responden menyatakan mengalami masalah X."
+</div>
+</section>
+
+<section>
+<h2>8. Rubrik Penilaian UTS</h2>
+<table class="rubric">
+<tr><th>Komponen</th><th>Bobot</th></tr>
+<tr><td>Problem / Opportunity Identification</td><td>15%</td></tr>
+<tr><td>Customer Needs Analysis</td><td>15%</td></tr>
+<tr><td>Competitive Analysis</td><td>15%</td></tr>
+<tr><td>Product Concept &amp; Value Proposition</td><td>15%</td></tr>
+<tr><td>Product Design / Prototype</td><td>15%</td></tr>
+<tr><td>Target Market &amp; Positioning</td><td>10%</td></tr>
+<tr><td>Market Testing Plan</td><td>10%</td></tr>
+<tr><td>Argumentasi &amp; Data / Evidence</td><td>5%</td></tr>
+<tr><th>TOTAL</th><th>100%</th></tr>
+</table>
+<p><strong>Bobot UTS dalam nilai akhir mata kuliah: 20%.</strong></p>
+</section>
+
+<section>
+<h2>9. Kriteria Kualitas Jawaban</h2>
+<table>
+<tr><th>Level</th><th>Karakteristik</th></tr>
+<tr><td><strong>85–100</strong></td><td>Problem jelas, evidence kuat, customer needs tajam, competitive analysis mendalam, solusi relevan, prototype jelas, dan market testing terukur.</td></tr>
+<tr><td><strong>70–84</strong></td><td>Analisis cukup lengkap, tetapi sebagian argumentasi atau evidence masih perlu diperkuat.</td></tr>
+<tr><td><strong>60–69</strong></td><td>Produk dan masalah dapat dijelaskan, tetapi hubungan customer needs, solusi, dan pasar belum kuat.</td></tr>
+<tr><td><strong>&lt;60</strong></td><td>Jawaban dominan berupa deskripsi/opini tanpa analisis customer, kompetitor, problem, evidence, dan market testing yang memadai.</td></tr>
+</table>
+</section>
+
+<section>
+<h2>10. Pertanyaan Utama UTS</h2>
+<div class="success" style="font-size:1.1rem">
+<strong>“Apakah produk tersebut benar-benar menyelesaikan masalah customer?”</strong>
+<br><br>
+Jawaban Anda harus dibuktikan melalui <strong>analisis, data/evidence, dan argumentasi</strong> — bukan hanya opini.
+</div>
+</section>
+
+<section>
+<h2>11. Checklist Sebelum Mengumpulkan</h2>
+<ul>
+<li>☐ Saya sudah memilih Option A atau Option B.</li>
+<li>☐ Saya memiliki problem/opportunity yang jelas.</li>
+<li>☐ Saya mengidentifikasi minimal 5 customer needs.</li>
+<li>☐ Saya memiliki evidence/data pendukung.</li>
+<li>☐ Saya melakukan competitive analysis.</li>
+<li>☐ Saya menjelaskan value proposition.</li>
+<li>☐ Saya menentukan target market dan positioning.</li>
+<li>☐ Saya membuat prototype.</li>
+<li>☐ Saya merancang market testing.</li>
+<li>☐ Semua keputusan utama memiliki alasan/evidence.</li>
+<li>☐ Laporan sudah disusun sesuai struktur UTS.</li>
+</ul>
+</section>
+
+</main>
+
+<div class="footer">
+    <p><strong>UTS Pengembangan Produk · Program Studi Bisnis Digital · Universitas Padjadjaran</strong></p>
+    <p>Think from the customer problem. Build with evidence. Test before you scale.</p>
+</div>
+
+</body>
+</html>
